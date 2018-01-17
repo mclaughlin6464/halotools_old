@@ -46,6 +46,11 @@ class CorrelationAssembias(HeavisideAssembias):
     """
     Class used to extend the behavior of `HeavisideAssembias` for continuous distributions.
     """
+    def _get_assembias_param_dict_key(self, ipar):
+        """
+        """
+        # changing the naem to make emulation more straightforward
+        return self._method_name_to_decorate + '_' + self.gal_type + '_assembias_corr' + str(ipar+1)
 
     def _galprop_perturbation(self, **kwargs):
         r"""
